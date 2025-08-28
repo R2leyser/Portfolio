@@ -1,3 +1,7 @@
+---
+import Navbar from "../components/Navbar.astro"
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,18 +9,93 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Portfolio</title>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<slot />
+        <div class="container">
+            <Navbar />
+		    <slot />
+        </div>
 	</body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
+    :root{
+        --accent: #5A4ECB;
+        --secondary-accent: #5A50BA;
+        --dark: #4E44AC;
+        --background-light: #4E4C67;
+        --background: #1E1D25;
+        --background-dark: #18161D;
+        --foreground: #FFFFFF.
+    }
+
+    * {
+        color: #FFF;
+    }
+    
+    html, body {
+        /* background-image: url(/src/assets/star-outline-icon-593282-512.png), url(/src/assets/star-outline-icon-593282-512.png); */
+        /* background-size: 120px, 120px; */
+        background-blend-mode: overlay;
+        /* background-repeat: repeat, repeat; */
+        background: repeating-linear-gradient( 45deg,
+            darkgrey,
+            darkgrey 10rem,
+            transparent 10rem,
+            transparent 20rem
+                );
+
+
+        background-color: var(--background-dark);
+
+        width: 100%;
+        margin: 0;
+    }
+
+	.container {
+        background-color: var(--background);
+        margin: 0;
+        display: flex;
+        gap: 5rem;
+        flex-direction: column;
+		margin: auto;
+        padding: 5rem;
+        padding-top: 0rem;
+		width: 50%;
 		height: 100%;
+
+        border-inline: var(--background-light);
+        border-left: dotted;
+        border-right: dotted;
 	}
+
+    section {
+        margin-top: 3rem;
+    }
+
+    h1 {
+        font-size: 200%;
+        margin-top: 1ch;
+        align-text: lef;
+        margin: auto;
+        font-style: normal;
+        font-family: "Edu NSW ACT Cursive", cursive;
+    }
+
+    h2 {
+        margin: 0 0 1em;
+        font-weight: normal;
+        font-size: 20px;
+    }
+
+    p {
+        color: #4b5563;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.006em;
+        margin: 0;
+    }
+
 </style>

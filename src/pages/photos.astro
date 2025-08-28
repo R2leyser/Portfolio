@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Gallery from '../components/Gallery.astro';
+---
+
+<Layout>
+
+<div class="container">
+    <div class="center">
+        <h1>My favorite photos</h1>
+    </div>
+
+    <Gallery/>
+</div>
+
+<style>
+    .center {
+        display: flex;
+        align-items: center;
+        margin: auto;
+        margin-bottom: 5rem;
+    }
+
+    h1 {
+        font-size: 300%;
+        margin-top: 1ch;
+        align-text: center;
+        margin: auto;
+        font-style: normal;
+        font-family: "Edu NSW ACT Cursive", cursive;
+    }
+
+</style>
+
+</Layout>
+
+

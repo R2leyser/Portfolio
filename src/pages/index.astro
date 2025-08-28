@@ -1,11 +1,123 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Hero from "../components/Hero.astro";
 ---
 
 <Layout>
-	<Welcome />
+<div id="greeting"> 
+    <div id="hero">
+        <Hero/>
+    </div>
+    <div id="about">
+        <h1>Hello! Nice to meet you</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit perferendis consequatur, maiores voluptatibus fugit necessitatibus assumenda nobis deleniti magni aperiam sit amet quae reiciendis, corrupti nisi distinctio dolore at obcaecati!</p>
+    </div>
+</div>
+
+<section id="mainSection">
+    <h1>Projects</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit perferendis consequatur, maiores voluptatibus fugit necessitatibus assumenda nobis deleniti magni aperiam sit amet quae reiciendis, corrupti nisi distinctio dolore at obcaecati!</p>
+</section>
+<section id="mainSection">
+    <h1>Skills</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit perferendis consequatur, maiores voluptatibus fugit necessitatibus assumenda nobis deleniti magni aperiam sit amet quae reiciendis, corrupti nisi distinctio dolore at obcaecati!</p>
+</section>
+<section id="mainSection">
+    <h1>Links</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit perferendis consequatur, maiores voluptatibus fugit necessitatibus assumenda nobis deleniti magni aperiam sit amet quae reiciendis, corrupti nisi distinctio dolore at obcaecati!</p>
+</section>
+
+
+<style>
+
+    h1 {
+        font-size: 200%;
+        margin-top: 1ch;
+        align-text: lef;
+        margin: auto;
+        font-style: normal;
+        font-family: "Edu NSW ACT Cursive", cursive;
+    }
+
+    #about {
+        align-self: center;
+        width: 80%;
+    }
+
+    #greeting {
+        display:flex;
+        gap: 2rem;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    #background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        filter: blur(100px);
+    }
+
+
+    main {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+    #mainSection {
+        text-align: justify;
+    }
+
+    #mainSection>h1{
+        text-align: center;
+        margin-bottom: 1ch;
+    }
+
+
+    .box {
+        padding: 16px;
+        background: rgba(255, 255, 255, 1);
+        border-radius: 16px;
+        border: 1px solid white;
+    }
+
+    @media screen and (max-height: 368px) {
+        #news {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        #container {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        #links {
+            flex-wrap: wrap;
+        }
+
+        #links a.button {
+            padding: 14px 18px;
+        }
+
+        #news {
+            right: 16px;
+            left: 16px;
+            bottom: 2.5rem;
+            max-width: 100%;
+        }
+
+        h1 {
+            line-height: 1.5;
+        }
+    }
+</style>
 </Layout>
