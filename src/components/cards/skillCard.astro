@@ -1,0 +1,59 @@
+---
+const {
+    name,
+    description,
+    icon
+} = Astro.props
+---
+
+<div id="card">
+    <img src={icon} alt={name}>
+    <p>{description}</p>
+</div>
+
+<style>
+    #card {
+        padding: 2rem;
+
+        border-color: var(--dark);
+        border-style: solid;
+        border-radius: 1rem;
+        
+        height: 60%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+
+        gap: 1rem;
+        margin: auto;
+
+        box-shadow: 0.5rem 0.5rem 10px var(--background-dark);
+        aspect-ratio: 1;
+    }
+    
+    #card>*{
+        margin-block-start: auto;
+        margin-block-end: auto;
+    }
+
+    img {
+        margin-block: auto;
+        width: 10rem;
+        overflow: hidden;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--foreground);
+
+        display: flex;
+        align-content: center;
+
+        min: 100%;
+    }
+
+
+</style>

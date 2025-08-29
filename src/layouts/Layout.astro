@@ -1,23 +1,26 @@
 ---
 import Navbar from "../components/Navbar.astro"
+import { ClientRouter, fade, slide } from 'astro:transitions';
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Portfolio</title>
-        <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap" rel="stylesheet">
-	</head>
-	<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Delius&family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
         <div class="container">
             <Navbar />
-		    <slot />
+            <slot transition:animate="slide"/>
         </div>
-	</body>
+    </body>
 </html>
 
 <style>
@@ -63,7 +66,7 @@ import Navbar from "../components/Navbar.astro"
 		margin: auto;
         padding: 5rem;
         padding-top: 0rem;
-		width: 50%;
+		width: 55%;
 		height: 100%;
 
         border-inline: var(--background-light);
@@ -75,14 +78,6 @@ import Navbar from "../components/Navbar.astro"
         margin-top: 3rem;
     }
 
-    h1 {
-        font-size: 200%;
-        margin-top: 1ch;
-        align-text: lef;
-        margin: auto;
-        font-style: normal;
-        font-family: "Edu NSW ACT Cursive", cursive;
-    }
 
     h2 {
         margin: 0 0 1em;
@@ -92,10 +87,13 @@ import Navbar from "../components/Navbar.astro"
 
     p {
         color: #4b5563;
-        font-size: 16px;
+        font-size: 20px;
         line-height: 24px;
         letter-spacing: -0.006em;
         margin: 0;
     }
 
+      @view-transition {
+        navigation: auto; /* enabled! */
+      }
 </style>

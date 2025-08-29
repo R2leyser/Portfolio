@@ -7,7 +7,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 );
 ---
 
-<section>
+<section class="justified-gallery">
     {
       Object.entries(images).map(async ([_path, image], index) => {
         const { default: imageData } = await image();
@@ -32,35 +32,35 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 </section>
 
 <script>
-  import { Fancybox } from "@fancyapps/ui/dist/fancybox/";
+    import { Fancybox } from "@fancyapps/ui/dist/fancybox/";
 
-  Fancybox.bind("[data-fancybox]", {
-    theme: "auto",
-    mainStyle: {
-      "--f-button-width": "44px",
-      "--f-button-height": "44px",
-      "--f-button-border-radius": "50%",
-      "--f-toolbar-padding": "16px",
-    },
-    Carousel: {
-      Arrows: false,
-      Toolbar: {
-        display: {
-          left: [],
-          middle: [],
-          right: ["close"],
+    Fancybox.bind("[data-fancybox]", {
+        theme: "auto",
+        mainStyle: {
+            "--f-button-width": "44px",
+            "--f-button-height": "44px",
+            "--f-button-border-radius": "50%",
+            "--f-toolbar-padding": "16px",
         },
-      },
-      transition: "slide",
-    },
-  });
+        Carousel: {
+            Arrows: true,
+            Toolbar: {
+                display: {
+                    left: [],
+                    middle: [],
+                    right: ["close"],
+                },
+            },
+            transition: "slide",
+        },
+    });
 </script>
 
 <style>
   .justified-gallery {
     --padding: max(2.5vw, 12px);
-    --space: max(2.5vw, 12px);
-    --min-height: clamp(200px, 20vw, 400px);
+    --space: max(0.5vw, 12px);
+    --min-height: clamp(150px, 15vw, 300px);
 
     padding: var(--padding);
     display: flex;
@@ -71,7 +71,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
       flex-grow: calc(var(--width) * (100000 / var(--height)));
       flex-basis: calc(var(--min-height) * (var(--width) / var(--height)));
       aspect-ratio: var(--width) / var(--height);
-      overflow: hidden;
+      overflow: scroll;
       opacity: 1;
       transition: all 0.05s ease-in-out;
     }

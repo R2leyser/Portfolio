@@ -1,0 +1,31 @@
+---
+import SkillCard from "./cards/skillCard.astro"
+import SkillJson from "../json/skills.json"
+---
+
+<div id="container">
+    {
+        SkillJson.map((entry) => 
+            <SkillCard
+            name={ entry.name }
+            description={ entry.description }
+            icon={ entry.icon }
+            />
+        )
+    }
+</div>
+
+<style>
+
+    #container {
+        display: grid;
+        grid-auto-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    #container>*{
+        margin-inline: auto;
+    }
+
+</style>

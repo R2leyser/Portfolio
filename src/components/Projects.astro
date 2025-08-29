@@ -1,0 +1,32 @@
+---
+import ProjectCard from "./cards/projectCard.astro"
+import ProjectJson from "../json/projects.json"
+---
+
+<div id="container">
+    {
+        ProjectJson.map((entry) => 
+            <ProjectCard
+            name={ entry.name }
+            description={ entry.description }
+            url={ entry.url }
+            icon={ entry.icon }
+            />
+        )
+    }
+</div>
+
+<style>
+
+    #container {
+        display: grid;
+        grid-auto-rows: 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    #container>*{
+        margin-inline: auto;
+    }
+
+</style>

@@ -1,0 +1,48 @@
+[
+
+    {
+            "name":"C",
+            "description":"Pure C",
+            "icon":"/src/assets/C.svg"
+    },
+    {
+            "name":"Python",
+            "description":"Python",
+            "icon":"/src/assets/Python.png"
+    },
+    {
+            "name":"Java",
+            "description":"Java",
+            "icon":""
+    },
+    {
+            "name":"C++",
+            "description":"C++",
+            "icon":"/src/assets/C++.png"
+    },
+    {
+            "name":"Golang",
+            "description":"Golang",
+            "icon":"/src/assets/Go.png"
+    },
+    {
+            "name":"Typescript",
+            "description":"Typescript",
+            "icon":"/src/assets/TS.png"
+    },
+    {
+            "name":"HTML/CSS/JS",
+            "description":"Vanilla web",
+            "icon":""
+    },
+    {
+            "name":"Raylib",
+            "description":"Raylib in C++",
+            "icon":""
+    },
+    {
+            "name":"Astro",
+            "description":"Astro Framework",
+            "icon":"/src/assets/Astro.svg"
+    }
+]
