@@ -6,16 +6,6 @@
             "icon":"/src/assets/C.svg"
     },
     {
-            "name":"Python",
-            "description":"Python",
-            "icon":"/src/assets/Python.png"
-    },
-    {
-            "name":"Java",
-            "description":"Java",
-            "icon":""
-    },
-    {
             "name":"C++",
             "description":"C++",
             "icon":"/src/assets/C++.png"
@@ -26,6 +16,21 @@
             "icon":"/src/assets/Go.png"
     },
     {
+            "name":"Java",
+            "description":"Java",
+            "icon":"/src/assets/Java.png"
+    },
+    {
+            "name":"Python",
+            "description":"Python",
+            "icon":"/src/assets/Python.png"
+    },
+    {
+            "name":"Lua",
+            "description":"Lua",
+            "icon":"/src/assets/Lua.svg"
+    },
+    {
             "name":"Typescript",
             "description":"Typescript",
             "icon":"/src/assets/TS.png"
@@ -33,16 +38,26 @@
     {
             "name":"HTML/CSS/JS",
             "description":"Vanilla web",
-            "icon":""
-    },
-    {
-            "name":"Raylib",
-            "description":"Raylib in C++",
-            "icon":""
+            "icon":"/src/assets/HTML.png"
     },
     {
             "name":"Astro",
             "description":"Astro Framework",
             "icon":"/src/assets/Astro.svg"
+    },
+    {
+            "name":"Raylib",
+            "description":"Raylib",
+            "icon":"/src/assets/Raylib.png"
+    },
+    {
+            "name":"IDA",
+            "description":"Reverse engineering",
+            "icon":"/src/assets/IDA.png"
+    },
+    {
+            "name":"Linux",
+            "description":"Linux both as server admin and desktop",
+            "icon":"/src/assets/Linux.png"
     }
 ]

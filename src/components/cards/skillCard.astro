@@ -7,7 +7,9 @@ const {
 ---
 
 <div id="card">
-    <img src={icon} alt={name}>
+    <div class="img-container">
+        <img src={icon} alt={name}>
+    </div>
     <p>{description}</p>
 </div>
 
@@ -39,10 +41,17 @@ const {
         margin-block-end: auto;
     }
 
+    .img-container {
+        display: flex;
+        align-content: center;
+        max-height: 70%;
+        aspect-ratio: 1;
+    }
+
     img {
         margin-block: auto;
-        width: 10rem;
-        overflow: hidden;
+        width: 100%;
+        height: auto;
     }
 
     a {
