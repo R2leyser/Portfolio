@@ -17,24 +17,24 @@ import Skills from '../components/Skills.astro';
     </div>
 </div>
 
-<hr>
+<hr id="projects">
 
 <section id="mainSection">
-    <h1 id="projects">Projects</h1>
+    <h1 >Projects</h1>
     <Projects/>
 </section>
 
-<hr>
+<hr id="skills">
 
 <section id="mainSection">
-    <h1 id="skills">Skills</h1>
+    <h1>Skills</h1>
     <Skills/>
 </section>
 
-<hr>
+<hr id="links-header">
 
 <section id="mainSection">
-    <h1 id="links">Links</h1>
+    <h1>Links</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit perferendis consequatur, maiores voluptatibus fugit necessitatibus assumenda nobis deleniti magni aperiam sit amet quae reiciendis, corrupti nisi distinctio dolore at obcaecati!</p>
 </section>
 
@@ -110,32 +110,9 @@ import Skills from '../components/Skills.astro';
         border: 1px solid white;
     }
 
-    @media screen and (max-height: 368px) {
-        #news {
-            display: none;
-        }
-    }
-
     @media screen and (max-width: 768px) {
-        #container {
-            display: flex;
+        #greeting {
             flex-direction: column;
-        }
-
-
-        #links {
-            flex-wrap: wrap;
-        }
-
-        #links a.button {
-            padding: 14px 18px;
-        }
-
-        #news {
-            right: 16px;
-            left: 16px;
-            bottom: 2.5rem;
-            max-width: 100%;
         }
 
         h1 {

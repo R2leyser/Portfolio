@@ -57,7 +57,7 @@
     },
     {
             "name":"Linux",
-            "description":"Linux both as server admin and desktop",
+            "description":"Linux server and desktop",
             "icon":"/src/assets/Linux.png"
     }
 ]

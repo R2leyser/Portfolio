@@ -1,9 +1,9 @@
 [
 
     {
-            "name":"Conway's game of Life",
+            "name":"Game of Life",
             "url":"asdf",
-            "description":"An implementation of Conway's game of Life in pure C using raylib",
+            "description":"An implementation of Conway's game of Life in C using raylib",
             "icon":"/src/assets/pfp.jpg"
     },
     {

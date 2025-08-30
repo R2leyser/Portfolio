@@ -7,7 +7,7 @@
         <a href="/">Home</a>
         <a href="/#projects">Projects</a>
         <a href="/#skills">Skills</a>
-        <a href="/#links">Links</a>
+        <a href="/#links-header">Links</a>
         <a href="/photos">Photos</a>
     </div>
 <div/>
@@ -20,25 +20,32 @@
         font-size: 2.5ch;
 
         margin-top: 0;
+        padding: 1rem;
+        padding-top: 0;
         display: inline-flex;
         position: sticky;
         top: 0;
 
+        border-bottom: dotted white;
+
         background-color: var(--background);
+
+        z-index: 10000;
     }
     
     a {
         color: var(--dark);
         text-align: center;
-        padding: auto;
-        margin: auto;
+        margin-inline: auto;
         vertical-align: center;
         text-decoration: none;
+        transition:  cubic-bezier(1, 0, 0, 1), 0.2s; 
     }
     
     a:hover{
         color: var(--foreground);
         text-decoration: underline;
+        transition:  cubic-bezier(1, 0, 0, 1), 0.2s; 
     }
 
     #links {

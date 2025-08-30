@@ -8,14 +8,24 @@ const {
 
 <div id="card">
     <div class="img-container">
-        <img src={icon} alt={name}>
+        <img src={icon} alt={name} loading="lazy" >
     </div>
     <p>{description}</p>
 </div>
 
+<script>
+    const card = document.getElementById("card")
+
+    card?.addEventListener('click', () => {
+        card.classList.toggle('show')
+    })
+</script>
+
 <style>
     #card {
         padding: 2rem;
+
+        background-color: var(--background);
 
         border-color: var(--dark);
         border-style: solid;
@@ -34,6 +44,15 @@ const {
 
         box-shadow: 0.5rem 0.5rem 10px var(--background-dark);
         aspect-ratio: 1;
+        transition:  cubic-bezier(1, 0, 0, 1), 0.3s; 
+    }
+
+    #card:hover {
+        transform: translate(-0.5rem, -0.5rem);
+        box-shadow: 1rem 1rem 20px var(--background-dark);
+        border-color: var(--highlight);
+        background-color: var(--background-light);
+        transition:  cubic-bezier(1, 0, 0, 1), 0.3s; 
     }
     
     #card>*{

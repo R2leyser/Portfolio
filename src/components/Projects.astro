@@ -5,16 +5,27 @@ import ProjectJson from "../json/projects.json"
 
 <div id="container">
     {
-        ProjectJson.map((entry) => 
-            <ProjectCard
+    ProjectJson.map((entry) => 
+        <ProjectCard
             name={ entry.name }
             description={ entry.description }
             url={ entry.url }
             icon={ entry.icon }
-            />
-        )
+        />
+    )
     }
 </div>
+
+<script>
+    const cards = document.getElementsByClassName("card")
+
+    for (let i = 0; i < cards.length; i++) {
+        let card = cards.item(i)
+        card?.addEventListener('click', () => {
+            card.classList.toggle('show')
+        })
+    }
+</script>
 
 <style>
 
@@ -22,7 +33,12 @@ import ProjectJson from "../json/projects.json"
         display: grid;
         grid-auto-rows: 1fr;
         grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
+        gap: 1rem;
+    }
+
+    #container>.card {
+        grid-row: initial;
+        grid-column: initial;
     }
 
     #container>*{

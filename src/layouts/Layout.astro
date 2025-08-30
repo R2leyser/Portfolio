@@ -11,9 +11,9 @@ import { ClientRouter, fade, slide } from 'astro:transitions';
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
         <title>Portfolio</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Delius&family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap" rel="stylesheet">
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+        <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Delius&family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap" rel="stylesheet"> -->
     </head>
     <body>
         <div class="container">
@@ -25,6 +25,7 @@ import { ClientRouter, fade, slide } from 'astro:transitions';
 
 <style>
     :root{
+        --highlight: #7A6EEB;
         --accent: #5A4ECB;
         --secondary-accent: #5A50BA;
         --dark: #4E44AC;
@@ -36,6 +37,10 @@ import { ClientRouter, fade, slide } from 'astro:transitions';
 
     * {
         color: #FFF;
+        font-family: "Delius", cursive;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
     }
     
     html, body {
@@ -63,7 +68,7 @@ import { ClientRouter, fade, slide } from 'astro:transitions';
         display: flex;
         gap: 5rem;
         flex-direction: column;
-		margin: auto;
+		margin-inline: auto;
         padding: 5rem;
         padding-top: 0rem;
 		width: 55%;
@@ -93,7 +98,21 @@ import { ClientRouter, fade, slide } from 'astro:transitions';
         margin: 0;
     }
 
-      @view-transition {
-        navigation: auto; /* enabled! */
-      }
+
+    @media (hover: none) {
+        body, html, {
+            background: red;
+            background-blend-mode: auto;
+            display: flex;
+            padding: 0;
+            align-items: center;
+            background-color: red;
+        }
+
+        .container {
+            width: 100vw;
+            border: none;
+            margin: 0;
+        }
+    }
 </style>

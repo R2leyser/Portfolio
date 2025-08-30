@@ -23,7 +23,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
               src={imageData}
               alt=""
               height={200}
-              loading={index < 20 ? "eager" : "lazy"}
+              loading={index < 5 ? "eager" : "lazy"}
             />
           </a>
         );

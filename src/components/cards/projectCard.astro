@@ -5,19 +5,22 @@ const {
     description,
     icon
 } = Astro.props
+
+const className = name + "-card"
 ---
 
-<a href={url}>
-<div id="card">
+<div class="card">
     <img src={icon} alt="">
     <h1>{name}</h1>
     <p>{description}</p>
 </div>
-</a>
+
 
 <style>
-    #card {
+    .card {
         padding: 2rem;
+
+        background-color: var(--background);
 
         border-color: var(--dark);
         border-style: solid;
@@ -34,19 +37,8 @@ const {
         gap: 1rem;
 
         box-shadow: 0.5rem 0.5rem 10px var(--background-dark);
-    }
-    
-    #card>*{
-        margin-block-start: auto;
-        margin-block-end: auto;
-    }
+        transition:  cubic-bezier(1, 0, 0, 1), 0.3s;
 
-    img {
-        width: 10rem;
-        overflow: hidden;
-    }
-
-    a {
         margin-inline: auto;
         text-decoration: none;
         color: var(--foreground);
@@ -56,6 +48,51 @@ const {
 
         min: 100%;
     }
+    
+    .card:hover {
+        transform: translate(-0.5rem, -0.5rem);
+        box-shadow: 1rem 1rem 20px var(--background-dark);
+        border-color: var(--highlight);
+        background-color: var(--background-light);
+        transition:  cubic-bezier(1, 0, 0, 1), 0.3s; }
+    }
+
+    .card>*{
+        margin-block-start: auto;
+        margin-block-end: auto;
+    }
 
 
+    img {
+        width: 10rem;
+        overflow: hidden;
+    }
+
+
+    p {
+        font-family: "Delius", cursive;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    h1 {
+        font-style: normal;
+        font-family: "Edu NSW ACT Cursive", cursive;
+    }
+
+    .show {
+        position:absolute;
+        x: calc();
+        width: 50%;
+
+        align-self: center;
+        align-items: left;
+
+        margin:auto;
+
+        z-index: 10000;
+
+        transition: cubic-bezier(1, 0, 0, 1), 0.5s;
+    }
 </style>
