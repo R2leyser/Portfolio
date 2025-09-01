@@ -15,6 +15,52 @@ import SkillJson from "../json/skills.json"
     }
 </div>
 
+<script is:inline>
+    let cards = document.getElementsByClassName("cardContainer"); // Removed the dot
+    for (let cardContainer of cards) { // Changed to for...of
+        let child = cardContainer.children.item(0)
+        cardContainer.addEventListener('mousemove', (e) => {
+
+            // Get the bounding rectangle of the card
+            const rect = cardContainer.getBoundingClientRect();
+            const cardCenterX = rect.left + rect.width / 2;
+            const cardCenterY = rect.top + rect.height / 2;
+
+            // Calculate the mouse position relative to the center of the card
+            const xPosition = (e.clientX - cardCenterX) / (rect.width / 2);
+            const yPosition = (e.clientY - cardCenterY) / (rect.height / 2);
+
+            // Calculate rotation angles
+            const rotateX = yPosition * 25; // Adjust the multiplier for sensitivity
+            const rotateY = -xPosition * 25; // Adjust the multiplier for sensitivity
+
+            // Apply the rotation
+            child.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            for (element of child.children){
+                console.log(element)
+                const childXPosition = xPosition * 10; // Adjust for parallax effect
+                const childYPosition = yPosition * 10; // Adjust for parallax effect
+                for ( content of element.children) {
+                    content.style.transform = `translate(${childXPosition}px, ${childYPosition}px)`;
+                }
+            }
+        });
+
+        cardContainer.addEventListener('mouseleave', () => {
+            cardContainer.children.item(0).style.transform = 'rotateX(0deg) rotateY(0deg)';
+
+            for (element of child.children){
+                console.log(element)
+                const childXPosition = xPosition * 10; // Adjust for parallax effect
+                const childYPosition = yPosition * 10; // Adjust for parallax effect
+                for ( content of element.children) {
+                    content.style.transform = `translate(${childXPosition}px, ${childYPosition}px)`;
+                }
+            }
+        });
+    }
+</script>
+
 <style>
 
     #container {

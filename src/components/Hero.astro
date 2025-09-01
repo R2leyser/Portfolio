@@ -30,6 +30,8 @@
         padding: 0.5rem;
         max-width: fit-content;
         width: fit-content;
+
+        border: 3px solid var(--highlight);
     }
 
     img {
@@ -48,8 +50,7 @@
     }
 
     img:hover{
-        animation: 1s, spin;
-        animation-name: spin;
+        animation: 1s spin;
         z-index: 1;
     }
 
@@ -72,6 +73,12 @@
         font-weight: 400;
         font-style: normal;
         font-family: "Edu NSW ACT Cursive", cursive;
+
+        box-shadow: 0 0 20px var(--background-dark);
+
+        h1 {
+            text-shadow: 5px 5px 1px var(--accent);
+        }
     }
 
 

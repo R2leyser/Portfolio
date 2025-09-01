@@ -6,20 +6,15 @@ const {
 } = Astro.props
 ---
 
-<div id="card">
-    <div class="img-container">
-        <img src={icon} alt={name} loading="lazy" >
+<div class="cardContainer">
+    <div id="card">
+        <div class="img-container">
+            <img src={icon} alt={name} loading="lazy" >
+        </div>
+        <p>{description}</p>
     </div>
-    <p>{description}</p>
 </div>
 
-<script>
-    const card = document.getElementById("card")
-
-    card?.addEventListener('click', () => {
-        card.classList.toggle('show')
-    })
-</script>
 
 <style>
     #card {
@@ -48,7 +43,7 @@ const {
     }
 
     #card:hover {
-        transform: translate(-0.5rem, -0.5rem);
+        transform: translate(-0.5rem, -0.5rem) scale(1.03);
         box-shadow: 0rem 0rem 40px var(--accent), 1rem 1rem 30px var(--background-dark);
         border-color: var(--highlight);
         background-color: var(--background-light);

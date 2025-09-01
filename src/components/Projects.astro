@@ -19,6 +19,75 @@ import ProjectJson from "../json/projects.json"
     }
 </div>
 
+<script is:inline>
+    let cards = document.getElementsByClassName("cardContainer"); // Removed the dot
+    for (let cardContainer of cards) { // Changed to for...of
+        let child = cardContainer.children.item(0)
+        let rotate = (e) => {
+
+            // Get the bounding rectangle of the card
+            const rect = cardContainer.getBoundingClientRect();
+            const cardCenterX = rect.left + rect.width / 2;
+            const cardCenterY = rect.top + rect.height / 2;
+
+            // Calculate the mouse position relative to the center of the card
+            const xPosition = (e.clientX - cardCenterX) / (rect.width / 2);
+            const yPosition = (e.clientY - cardCenterY) / (rect.height / 2);
+
+            // Calculate rotation angles
+            const rotateX = yPosition * 25; // Adjust the multiplier for sensitivity
+            const rotateY = -xPosition * 25; // Adjust the multiplier for sensitivity
+
+            if (rotateX > 70) {
+                rotateX = 70
+            }
+
+            if (rotateY > 70) {
+                rotateY = 70
+            }
+
+            if (rotateX < -70) {
+                rotateX = -70
+            }
+
+            if (rotateY < -70) {
+                rotateY = -70
+            }
+
+            // Apply the rotation
+            child.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            for (element of child.children){
+                console.log(element)
+                const childXPosition = xPosition * 10; // Adjust for parallax effect
+                const childYPosition = yPosition * 10; // Adjust for parallax effect
+                for ( content of element.children) {
+                    content.style.transform = `translate(${childXPosition}px, ${childYPosition}px)`;
+                }
+            }
+
+        }
+
+        cardContainer.addEventListener('mousemove', (e) => {
+            rotate(e)
+        });
+
+        cardContainer.addEventListener('mouseenter', (e) => {
+            rotate(e)
+        });
+
+        cardContainer.addEventListener('mouseleave', () => {
+            cardContainer.children.item(0).style.transform = 'rotateX(0deg) rotateY(0deg)';
+
+            for (element of child.children){
+                for ( content of element.children) {
+                    content.style.transform = `translate(0, 0)`;
+                    content.style.trasition = `cubic-bezier(1, 0, 0, 1), 0.2s`;
+                }
+            }
+        });
+    }
+</script>
+
 <style>
 
     #container {

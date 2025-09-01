@@ -1,5 +1,5 @@
 ---
-const {id, open} = Astro.props;
+const {id, className} = Astro.props;
 ---
 
 <style>
@@ -24,6 +24,7 @@ const {id, open} = Astro.props;
         box-shadow: 0 0 20px var(--dark);
     }
 
+
     @keyframes slide-down {
         0% {
             transform: scale(1, 0);
@@ -35,9 +36,13 @@ const {id, open} = Astro.props;
             transform: scale(1);
         }
     }
+
+    .button {
+        height: 85%;
+    }
 </style>
 
-<div onclick={`window.${id}.showModal()`}><slot name="open"/></div>
+<div class="button" onclick={`window.${id}.showModal()`}><slot name="open"/></div>
 
 <dialog onclick={`window.${id}.close()`} id={id}>
   <slot name="main" />

@@ -15,8 +15,9 @@ const {
 const className = name.toLowerCase().replaceAll(" ", "_").replaceAll("-", "_")
 ---
 
+<div class="cardContainer">
 <Modal id={className} open='Open modal'>
-<div class="card" slot="open" }>
+<div id={"card-"+className} class="card" slot="open" }>
     <img src={icon} alt="">
     <h1>{name}</h1>
     <p>{description}</p>
@@ -47,7 +48,7 @@ const className = name.toLowerCase().replaceAll(" ", "_").replaceAll("-", "_")
 </div 
 
 </Modal>
-
+</div>
 
 <style>
     #modal {
@@ -63,7 +64,7 @@ const className = name.toLowerCase().replaceAll(" ", "_").replaceAll("-", "_")
 
         gap: 3rem;
 
-        margin-inline: auto;
+        margin-inline: 0;
         text-decoration: none;
         color: var(--foreground);
 
@@ -76,6 +77,16 @@ const className = name.toLowerCase().replaceAll(" ", "_").replaceAll("-", "_")
         border-color: var(--highlight);
         border-style: solid;
         border-radius: 1rem;
+    }
+
+    .cardContainer {
+        position: relative;
+        padding: 0;
+
+        .button {
+            height: 100%;
+        }
+
     }
 
     .vertical {
@@ -101,11 +112,12 @@ const className = name.toLowerCase().replaceAll(" ", "_").replaceAll("-", "_")
         border-radius: 1rem;
 
         width: auto;
-        height: 85%;
+        min-height: 100%;
 
         display: flex;
         flex-direction: column;
         align-items: center;
+        align-content: center;
 
         text-align: center;
 
@@ -114,23 +126,30 @@ const className = name.toLowerCase().replaceAll(" ", "_").replaceAll("-", "_")
         box-shadow: 0.5rem 0.5rem 10px var(--background-dark);
         transition:  cubic-bezier(1, 0, 0, 1), 0.3s;
 
-        margin-inline: auto;
         text-decoration: none;
         color: var(--foreground);
 
-        display: flex;
-        align-content: center;
+        margin: 0;
+
         cursor: pointer;
 
+        
+
+        box-sizing: border-box;
+        flex: 1;
     }
     
     .card:hover {
+
         transform: translate(-0.5rem, -0.5rem);
         box-shadow: 0rem 0rem 40px var(--accent), 1rem 1rem 30px var(--background-dark);
         border-color: var(--highlight);
         background-color: var(--background-light);
         transition:  cubic-bezier(1, 0, 0, 1), 0.3s; }
         z-index: -1;
+
+        animation: 1s bob alternate infinite;
+        
     }
 
     .card>*{
@@ -185,6 +204,15 @@ const className = name.toLowerCase().replaceAll(" ", "_").replaceAll("-", "_")
 
     dialog::highlight {
         border: none;
+    }
+
+    @keyframes bob {
+        0% {
+            transform: scale(1.03);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
 
 </style>
