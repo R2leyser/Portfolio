@@ -1,6 +1,5 @@
 ---
 import Navbar from "../components/Navbar.astro"
-import { ClientRouter, fade, slide } from 'astro:transitions';
 ---
 
 <!doctype html>
@@ -45,18 +44,26 @@ import { ClientRouter, fade, slide } from 'astro:transitions';
     
     html, body {
         /* background-image: url(/src/assets/star-outline-icon-593282-512.png), url(/src/assets/star-outline-icon-593282-512.png); */
-        /* background-size: 120px, 120px; */
         background-blend-mode: overlay;
-        /* background-repeat: repeat, repeat; */
-        background: repeating-linear-gradient( 45deg,
-            darkgrey,
-            darkgrey 10rem,
-            transparent 10rem,
-            transparent 20rem
-                );
-
+        /* background: repeating-linear-gradient( */
+        /*     45deg, */
+        /*     #606dbc, */
+        /*     #606dbc 10px, */
+        /*     #465298 10px, */
+        /*     #465298 20px */
+        /*         ); */
+        background-blend-mode: overlay;
+        background-image: repeating-linear-gradient( 45deg,
+                darkgray,
+                darkgray 10rem,
+                transparent 10rem,
+                transparent 20rem
+            );
 
         background-color: var(--background-dark);
+
+
+        animation: move 2s infinite linear;
 
         width: 100%;
         margin: 0;
@@ -73,6 +80,8 @@ import { ClientRouter, fade, slide } from 'astro:transitions';
         padding-top: 0rem;
 		width: 55%;
 		height: 100%;
+
+        box-shadow: 0 0 2rem black;
 
         border-inline: var(--background-light);
         border-left: dotted;

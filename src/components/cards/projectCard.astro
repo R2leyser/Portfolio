@@ -51,7 +51,7 @@ const className = name.toLowerCase().replaceAll(" ", "_").replaceAll("-", "_")
 
 <style>
     #modal {
-        padding: 2rem;
+        padding: 3rem;
         color: white;
 
         background-color: var(--background);
@@ -61,20 +61,26 @@ const className = name.toLowerCase().replaceAll(" ", "_").replaceAll("-", "_")
 
         text-align: center;
 
-        gap: 1rem;
+        gap: 3rem;
 
         margin-inline: auto;
         text-decoration: none;
         color: var(--foreground);
 
+        max-width: 50ch;
+
         display: flex;
         align-content: center;
 
+        box-shadow: 0rem 0rem 40px var(--accent), 1rem 1rem 30px var(--background-dark);
+        border-color: var(--highlight);
+        border-style: solid;
+        border-radius: 1rem;
     }
 
     .vertical {
         flex-grow: column;
-        width: fit-content;
+
         align-content: left;
         text-align: left;
         left: 0;
@@ -114,6 +120,7 @@ const className = name.toLowerCase().replaceAll(" ", "_").replaceAll("-", "_")
 
         display: flex;
         align-content: center;
+        cursor: pointer;
 
     }
     
@@ -133,7 +140,7 @@ const className = name.toLowerCase().replaceAll(" ", "_").replaceAll("-", "_")
 
 
     img {
-        width: 10rem;
+        width: min(10rem, 50%);
         overflow: hidden;
     }
 
@@ -155,20 +162,6 @@ const className = name.toLowerCase().replaceAll(" ", "_").replaceAll("-", "_")
         font-size: 120%;
     }
 
-    .show {
-        position:absolute;
-        x: calc();
-        width: 50%;
-
-        align-self: center;
-        align-items: left;
-
-        margin:auto;
-
-
-        transition: cubic-bezier(1, 0, 0, 1), 0.5s;
-    }
-
     ul {
         display: flex;
         padding-inline: 0;
@@ -188,6 +181,10 @@ const className = name.toLowerCase().replaceAll(" ", "_").replaceAll("-", "_")
         background: var(--dark);
         list-style-type: none;
         max-height: 2ch;
+    }
+
+    dialog::highlight {
+        border: none;
     }
 
 </style>

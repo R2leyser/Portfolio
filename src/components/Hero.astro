@@ -3,16 +3,19 @@
 
 <div class="Hero">
     <img src="/src/assets/pfp.jpg">
-    <h1 id="name">Lia Leyser</h1>
+    <h1 id="name" >Lia Leyser</h1>
     <div class="tag">
     <p id="tag">Developer | Photographer | Student</p>
     </div>
 </div>
 
+
 <style>
 	h1 {
+        padding-block: auto;
 		font-size: 5ch;
         line-height: 1.4ch;
+        z-index: 2;
 	}
 
     p {
@@ -30,6 +33,7 @@
     }
 
     img {
+        padding-block: auto;
         overflow: hidden;
         display: flex;
         align-self: center;
@@ -40,6 +44,13 @@
         border-style: double;
         border-width: 1rem;
         border-color: var(--dark);
+
+    }
+
+    img:hover{
+        animation: 1s, spin;
+        animation-name: spin;
+        z-index: 1;
     }
 
     .Hero {
@@ -51,6 +62,8 @@
 
         display: flex;
         flex-direction: column;
+        flex-grow: 3;
+
         align-items: center;
         gap: 1rem;
 
@@ -59,7 +72,17 @@
         font-weight: 400;
         font-style: normal;
         font-family: "Edu NSW ACT Cursive", cursive;
+    }
 
+
+    @keyframes spin {
+        from {
+            transform: rotate(360deg);
+        }
+
+        to {
+            transform: rotate(0deg);
+        }
     }
 
 </style>

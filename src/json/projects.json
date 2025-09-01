@@ -56,12 +56,12 @@
             "tech": [
                     "C++",
                     "Reverse engineering",
-                    "Game Hacking",
-                    "Endstone"
+                    "Game Hacking"
                 ],
 
             "contributors": [
-                "Me"
+                "Me",
+                "ForestOfLight"
             ]
 
     },
