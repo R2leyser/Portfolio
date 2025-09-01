@@ -11,5 +11,8 @@
   "dependencies": {
     "@fancyapps/ui": "^6.0.25",
     "astro": "^5.13.4"
+  },
+  "devDependencies": {
+    "sass-embedded": "^1.91.0"
   }
 }

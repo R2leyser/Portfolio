@@ -4,36 +4,98 @@
             "name":"Game of Life",
             "url":"asdf",
             "description":"An implementation of Conway's game of Life in C using raylib",
-            "icon":"/src/assets/pfp.jpg"
+            "icon":"/src/assets/pfp.jpg",
+
+            "tech": [
+                    "C",
+                    "Raylib"
+                ],
+
+            "contributors": [
+                "Me"
+            ]
     },
     {
             "name":"GoWebDeck",
             "url":"asdf",
             "description":"Webapp to turn my old tablet into a script runner deck in go with no libs",
-            "icon":"/src/assets/pfp.jpg"
+            "icon":"/src/assets/pfp.jpg",
+
+            "tech": [
+                    "Go",
+                    "Http"
+                ],
+
+            "contributors": [
+                "Me"
+            ]
+
     },
     {
             "name":"Jaint",
             "url":"asdf",
             "description":"Vector based paint clone for my data structures class",
-            "icon":"/src/assets/pfp.jpg"
+            "icon":"/src/assets/pfp.jpg",
+
+            "tech": [
+                    "Java",
+                    "Java Swing"
+                ],
+
+            "contributors": [
+                "Me"
+            ]
+
     },
     {
             "name":"Boreal",
             "url":"asdf",
             "description":"A Minecraft Bedrock server side mod that allows the player to change the tick speed",
-            "icon":"/src/assets/pfp.jpg"
+            "icon":"/src/assets/pfp.jpg",
+
+            "tech": [
+                    "C++",
+                    "Reverse engineering",
+                    "Game Hacking",
+                    "Endstone"
+                ],
+
+            "contributors": [
+                "Me"
+            ]
+
     },
     {
             "name":"Start-page",
             "url":"asdf",
             "description":"A custom website meant to be used as a start page on my browser",
-            "icon":"/src/assets/pfp.jpg"
+            "icon":"/src/assets/pfp.jpg",
+
+            "tech": [
+                    "Vanilla web"
+                ],
+
+            "contributors": [
+                "Me",
+                "Just me"
+            ]
+
     },
     {
             "name":"This website",
             "url":"asdf",
             "description":"This portfolio website using Astro",
-            "icon":"/src/assets/pfp.jpg"
+            "icon":"/src/assets/pfp.jpg",
+
+            "tech": [
+                    "test",
+                    "test 2",
+                    "test 3"
+                ],
+
+            "contributors": [
+                "Me"
+            ]
+
     }
 ]

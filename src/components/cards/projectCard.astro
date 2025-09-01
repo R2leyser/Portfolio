@@ -1,22 +1,90 @@
 ---
+
+import Modal from "../Modal.astro"
+
 const {
     name,
     url,
     description,
-    icon
+    icon,
+    longerDescription,
+    contributors,
+    tech
 } = Astro.props
 
-const className = name + "-card"
+const className = name.toLowerCase().replaceAll(" ", "_").replaceAll("-", "_")
 ---
 
-<div class="card">
+<Modal id={className} open='Open modal'>
+<div class="card" slot="open" }>
     <img src={icon} alt="">
     <h1>{name}</h1>
     <p>{description}</p>
 </div>
 
+<div id="modal" slot="main">
+    <img src={icon} alt="">
+    <div class="vertical">
+        <h1>{name}</h1>
+        <p>{longerDescription}</p>
+        <h2>Contributors to the project</h2>
+        <ul class="contributors">
+            {
+            contributors?.map((entry: String) => 
+                <li>{entry}</li>
+                )}
+        </ul>
+        <h2>Tech used</h2>
+        <ul class="tech">
+            {
+            tech?.map((entry: String) => 
+                <li>{entry}</li>
+            )
+            }
+        </ul>
+
+    </div>
+</div 
+
+</Modal>
+
 
 <style>
+    #modal {
+        padding: 2rem;
+        color: white;
+
+        background-color: var(--background);
+
+        display: flex;
+        align-items: center;
+
+        text-align: center;
+
+        gap: 1rem;
+
+        margin-inline: auto;
+        text-decoration: none;
+        color: var(--foreground);
+
+        display: flex;
+        align-content: center;
+
+    }
+
+    .vertical {
+        flex-grow: column;
+        width: fit-content;
+        align-content: left;
+        text-align: left;
+        left: 0;
+
+        p {
+            max-width: 30ch;
+        }
+            max-width: 40ch;
+    }
+
     .card {
         padding: 2rem;
 
@@ -26,7 +94,8 @@ const className = name + "-card"
         border-style: solid;
         border-radius: 1rem;
 
-        width: fit-content;
+        width: auto;
+        height: 85%;
 
         display: flex;
         flex-direction: column;
@@ -46,15 +115,15 @@ const className = name + "-card"
         display: flex;
         align-content: center;
 
-        min: 100%;
     }
     
     .card:hover {
         transform: translate(-0.5rem, -0.5rem);
-        box-shadow: 1rem 1rem 20px var(--background-dark);
+        box-shadow: 0rem 0rem 40px var(--accent), 1rem 1rem 30px var(--background-dark);
         border-color: var(--highlight);
         background-color: var(--background-light);
         transition:  cubic-bezier(1, 0, 0, 1), 0.3s; }
+        z-index: -1;
     }
 
     .card>*{
@@ -81,6 +150,11 @@ const className = name + "-card"
         font-family: "Edu NSW ACT Cursive", cursive;
     }
 
+    h2 {
+        font-weight: 700;
+        font-size: 120%;
+    }
+
     .show {
         position:absolute;
         x: calc();
@@ -91,8 +165,29 @@ const className = name + "-card"
 
         margin:auto;
 
-        z-index: 10000;
 
         transition: cubic-bezier(1, 0, 0, 1), 0.5s;
     }
+
+    ul {
+        display: flex;
+        padding-inline: 0;
+        flex-direction: row;
+        gap: 1rem;
+        align-self: flex-start;
+        align-content: flex-start;
+        align-items: left;
+        flex-wrap: wrap;
+    }
+
+    li {
+        display: inline-block;
+        padding-inline: 15px;
+        padding-block: 5px;
+        border-radius: 10%;
+        background: var(--dark);
+        list-style-type: none;
+        max-height: 2ch;
+    }
+
 </style>

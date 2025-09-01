@@ -11,21 +11,13 @@ import ProjectJson from "../json/projects.json"
             description={ entry.description }
             url={ entry.url }
             icon={ entry.icon }
+            longerDescription={ entry.description }
+            tech={ entry.tech }
+            contributors={ entry.contributors }
         />
     )
     }
 </div>
-
-<script>
-    const cards = document.getElementsByClassName("card")
-
-    for (let i = 0; i < cards.length; i++) {
-        let card = cards.item(i)
-        card?.addEventListener('click', () => {
-            card.classList.toggle('show')
-        })
-    }
-</script>
 
 <style>
 
@@ -33,16 +25,11 @@ import ProjectJson from "../json/projects.json"
         display: grid;
         grid-auto-rows: 1fr;
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-    }
-
-    #container>.card {
-        grid-row: initial;
-        grid-column: initial;
+        gap: 2rem;
     }
 
     #container>*{
-        margin-inline: auto;
+        margin: auto;
     }
 
 </style>
