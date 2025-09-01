@@ -1,14 +1,14 @@
 [
     {
         "url":"https://github.com",
-        "image": "/src/assets/pfp.jpg"
+        "image": "../assets/pfp.jpg"
     },
     {
         "url":"https://github.com",
-        "image": "/src/assets/pfp.jpg"
+        "image": "../assets/pfp.jpg"
     },
     {
         "url":"https://github.com",
-        "image": "/src/assets/pfp.jpg"
+        "image": "../assets/pfp.jpg"
     }
 ]
