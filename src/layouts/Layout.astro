@@ -43,28 +43,15 @@ import Navbar from "../components/Navbar.astro"
     }
     
     html, body {
-        /* background-image: url(/src/assets/star-outline-icon-593282-512.png), url(/src/assets/star-outline-icon-593282-512.png); */
-        background-blend-mode: overlay;
-        /* background: repeating-linear-gradient( */
-        /*     45deg, */
-        /*     #606dbc, */
-        /*     #606dbc 10px, */
-        /*     #465298 10px, */
-        /*     #465298 20px */
-        /*         ); */
         background-blend-mode: overlay;
         background-image: repeating-linear-gradient( 45deg,
                 darkgray,
-                darkgray 10rem,
-                transparent 10rem,
-                transparent 20rem
+                darkgray 20rem,
+                transparent 20rem,
+                transparent 40rem
             );
 
         background-color: var(--background-dark);
-
-
-        animation: move 2s infinite linear;
-
         width: 100%;
         margin: 0;
     }
@@ -106,7 +93,6 @@ import Navbar from "../components/Navbar.astro"
         letter-spacing: -0.006em;
         margin: 0;
     }
-
 
     @media (hover: none) {
         body, html, {
