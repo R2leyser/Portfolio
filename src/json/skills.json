@@ -3,61 +3,61 @@
     {
             "name":"C",
             "description":"Pure C",
-            "icon":"../assets/C.svg"
+            "icon":"../../assets/C.svg"
     },
     {
             "name":"C++",
             "description":"C++",
-            "icon":"../assets/C++.png"
+            "icon":"../../assets/C++.png"
     },
     {
             "name":"Golang",
             "description":"Golang",
-            "icon":"../assets/Go.png"
+            "icon":"../../assets/Go.png"
     },
     {
             "name":"Java",
             "description":"Java",
-            "icon":"../assets/Java.png"
+            "icon":"../../assets/Java.png"
     },
     {
             "name":"Python",
             "description":"Python",
-            "icon":"../assets/Python.png"
+            "icon":"../../assets/Python.png"
     },
     {
             "name":"Lua",
             "description":"Lua",
-            "icon":"../assets/Lua.svg"
+            "icon":"../../assets/Lua.svg"
     },
     {
             "name":"Typescript",
             "description":"Typescript",
-            "icon":"../assets/TS.png"
+            "icon":"../../assets/TS.png"
     },
     {
             "name":"HTML/CSS/JS",
             "description":"Vanilla web",
-            "icon":"../assets/HTML.png"
+            "icon":"../../assets/HTML.png"
     },
     {
             "name":"Astro",
             "description":"Astro Framework",
-            "icon":"../assets/Astro.svg"
+            "icon":"../../assets/Astro.svg"
     },
     {
             "name":"Raylib",
             "description":"Raylib",
-            "icon":"../assets/Raylib.png"
+            "icon":"../../assets/Raylib.png"
     },
     {
             "name":"IDA",
             "description":"Reverse engineering",
-            "icon":"../assets/IDA.png"
+            "icon":"../../assets/IDA.png"
     },
     {
             "name":"Linux",
             "description":"Linux server and desktop",
-            "icon":"../assets/Linux.png"
+            "icon":"../../assets/Linux.png"
     }
 ]

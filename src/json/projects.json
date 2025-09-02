@@ -4,7 +4,11 @@
             "name":"Game of Life",
             "url":"asdf",
             "description":"An implementation of Conway's game of Life in C using raylib",
+<<<<<<< HEAD
             "icon":"../assets/pfp.jpg",
+=======
+            "icon":"../../assets/pfp.jpg",
+>>>>>>> dec1039 (fix images)
 
             "tech": [
                     "C",
@@ -19,7 +23,11 @@
             "name":"GoWebDeck",
             "url":"asdf",
             "description":"Webapp to turn my old tablet into a script runner deck in go with no libs",
+<<<<<<< HEAD
             "icon":"../assets/pfp.jpg",
+=======
+            "icon":"../../assets/pfp.jpg",
+>>>>>>> dec1039 (fix images)
 
             "tech": [
                     "Go",
@@ -35,7 +43,11 @@
             "name":"Jaint",
             "url":"asdf",
             "description":"Vector based paint clone for my data structures class",
+<<<<<<< HEAD
             "icon":"../assets/pfp.jpg",
+=======
+            "icon":"../../assets/pfp.jpg",
+>>>>>>> dec1039 (fix images)
 
             "tech": [
                     "Java",
@@ -51,7 +63,11 @@
             "name":"Boreal",
             "url":"asdf",
             "description":"A Minecraft Bedrock server side mod that allows the player to change the tick speed",
+<<<<<<< HEAD
             "icon":"../assets/pfp.jpg",
+=======
+            "icon":"../../assets/pfp.jpg",
+>>>>>>> dec1039 (fix images)
 
             "tech": [
                     "C++",
@@ -69,7 +85,11 @@
             "name":"Start-page",
             "url":"asdf",
             "description":"A custom website meant to be used as a start page on my browser",
+<<<<<<< HEAD
             "icon":"../assets/pfp.jpg",
+=======
+            "icon":"../../assets/pfp.jpg",
+>>>>>>> dec1039 (fix images)
 
             "tech": [
                     "Vanilla web"
@@ -85,7 +105,11 @@
             "name":"This website",
             "url":"asdf",
             "description":"This portfolio website using Astro",
+<<<<<<< HEAD
             "icon":"../assets/pfp.jpg",
+=======
+            "icon":"../../assets/pfp.jpg",
+>>>>>>> dec1039 (fix images)
 
             "tech": [
                     "test",
