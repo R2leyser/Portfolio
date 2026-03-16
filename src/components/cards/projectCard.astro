@@ -13,18 +13,19 @@ const {
 } = Astro.props
 
 const className = name.toLowerCase().replaceAll(" ", "_").replaceAll("-", "_")
+const iconSrc = `${import.meta.env.BASE_URL}/${icon}`
 ---
 
 <div class="cardContainer">
 <Modal id={className} open='Open modal'>
 <div id={"card-"+className} class="card" slot="open" }>
-    <img src={icon} alt="">
+    <img src={iconSrc} alt="">
     <h1>{name}</h1>
     <p>{description}</p>
 </div>
 
 <div id="modal" slot="main">
-    <img src={icon} alt="">
+    <img src={iconSrc} alt="">
     <div class="vertical">
         <h1>{name}</h1>
         <p>{longerDescription}</p>

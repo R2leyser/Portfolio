@@ -1,22 +1,22 @@
 [
     {
         "url":"https://github.com",
-        "image": "../assets/pfp.jpg"
+        "image": "assets/pfp.jpg"
     },
     {
         "url":"https://github.com",
-        "image": "../../assets/pfp.jpg"
+        "image": "assets/pfp.jpg"
     },
     {
         "url":"https://github.com",
-        "image": "../../assets/pfp.jpg"
+        "image": "assets/pfp.jpg"
     },
     {
         "url":"https://github.com",
-        "image": "../../assets/pfp.jpg"
+        "image": "assets/pfp.jpg"
     },
     {
         "url":"https://github.com",
-        "image": "../../assets/pfp.jpg"
+        "image": "assets/pfp.jpg"
     }
 ]
